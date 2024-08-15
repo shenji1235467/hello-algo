@@ -24,7 +24,7 @@ jobs:
     - name: Build the Docker image
       run: |
           docker build . --file Dockerfile --tag hello-algo:$(date +%s)
-          docker ps images
+          docker images
           docker save hello-algo -o hello-algo-amd64.tar
 
     - name: Compress the TAR files
